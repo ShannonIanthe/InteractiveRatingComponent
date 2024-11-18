@@ -22,7 +22,7 @@
   </head>
   <body>
     <!-- Rating state start -->
-    <div class="rating-div">
+    <div class="rating-div" id="rating-div">
       <span class="svg"
         ><svg
           width="17"
@@ -58,7 +58,7 @@
     </div>
 
     <!-- Thank you state start -->
-    <div class="rating-result">
+    <div class="rating-result" id="rating-result">
       <div class="selected-div">
         <svg
           class="svg-two"
@@ -168,12 +168,14 @@
       <!-- Thank you state end -->
     </div>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Shannon Mettry</a>.
-    </div>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Shannon Mettry</a>.
+      </div>
+    </footer>
 
     <script>
       //variables
@@ -205,16 +207,18 @@
 
       submitButton.addEventListener("click", function () {
         if (selectedRating) {
-          //updating the score display hwith selected rating
+          // Update the score display with the selected rating
           scoreDisplay.textContent = selectedRating;
 
-          // Hide the circle container
-          ratingDiv.style.display = "none";
+          // Add 'hide' class to ratingDiv (this hides it)
+          ratingDiv.classList.add("hide");
+          ratingDiv.classList.remove("show");
 
-          // show the rating result
-          ratingResult.style.display = "block";
+          // Add 'show' class to ratingResult (this shows it)
+          ratingResult.classList.add("show");
+          ratingResult.classList.remove("hide");
         } else {
-          alert("Please select a rating before submitting!s");
+          alert("Please select a rating before submitting!");
         }
       });
     </script>

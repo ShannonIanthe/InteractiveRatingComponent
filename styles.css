@@ -1,7 +1,6 @@
 body {
   background-color: hsl(216, 12%, 8%);
   font-family: "Overpass", sans-serif;
-  padding: 10rem 10rem;
 }
 .attribution {
   font-size: 11px;
@@ -11,6 +10,9 @@ body {
   align-items: center;
   width: 100%;
   color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -107,10 +109,36 @@ h2 {
   transition: 0.3s;
 }
 .rating-result {
-  display: none;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Initially hidden */
   text-align: center;
   font-size: 18px;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
+
 .svg-two {
   padding: 1rem;
+}
+/* Initially, ratingDiv is visible, and ratingResult is hidden */
+#ratingDiv {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+#ratingResult {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Classes for hiding and showing elements */
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
 }
