@@ -37,7 +37,7 @@ Users should be able to:
 
 ## Links
 
-- [Live Site URL](https://your-website.com) _(replace with your actual link)_
+- [Live Site URL](https://interactive-rating-component-rust-gamma.vercel.app/) 
 - [Frontend Mentor Challenge](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUm)
 
 ---
